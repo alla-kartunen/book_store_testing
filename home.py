@@ -9,14 +9,14 @@ driver.implicitly_wait(5)
 
 driver.execute_script("window.scrollBy(0, 600);")
 
-driver.find_element_by_xpath("//img[@title='Selenium Ruby']").click()
+driver.find_element_by_xpath("//img[@title='Selenium Ruby']").click()  # Нажать на книгу "Selenium Ruby"
 
-driver.find_element_by_css_selector(".reviews_tab > a").click()
+driver.find_element_by_css_selector(".reviews_tab > a").click()  # Выбрать вкладку "Reviews"
 
-driver.find_element_by_css_selector(".star-5").click()
-driver.find_element_by_id("comment").send_keys("Nice book!")
-driver.find_element_by_id("author").send_keys("Name")
-driver.find_element_by_id("email").send_keys("email@mail.ru")
-driver.find_element_by_id("submit").click()
+driver.find_element_by_css_selector(".star-5").click()  # Выбрать 5 звёзд
+driver.find_element_by_id("comment").send_keys("Nice book!")  # Ввести в поле комментария текст "Nice book!"
+driver.find_element_by_id("author").send_keys("Name")  # Ввести имя автора
+driver.find_element_by_id("email").send_keys("email@mail.ru")  # Ввести email
+driver.find_element_by_id("submit").click()  # Нажать кнопку "Submit"
 
 driver.quit()
